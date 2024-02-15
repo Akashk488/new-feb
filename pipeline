@@ -1,0 +1,20 @@
+pipieline{
+    agent any
+    stages {
+        stage('build') {
+            steps{
+                 sh "checout scm"
+            }  
+        }
+        stage ('Test') {
+            steps{
+              sh  echo "test done"
+            }
+        }
+        stage ('Deploy'){
+            steps {
+               sh echo "deploy done"
+            }
+        }
+    }
+}
